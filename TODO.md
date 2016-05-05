@@ -2,7 +2,7 @@
 
 + [x] introduce webpack
 + [x] update README.md
-+ [ ] introduce react
++ [x] introduce react
 + [ ] render transactions
 + [ ] query transactions by date (state update)
 + [ ] promisify plaid
