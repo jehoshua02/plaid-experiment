@@ -11,7 +11,8 @@ module.exports = {
   },
   plugins: [
     new HtmlPlugin({
-      title: 'Plaid Experiment'
+      title: 'Plaid Experiment',
+      favicon: path.resolve(__dirname, './src/favicon.ico')
     })
   ]
 }
