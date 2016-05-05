@@ -5,13 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server"
+    "start": "node server",
+    "build": "webpack --config ./client/webpack.config.js",
+    "watch": "webpack --watch --config ./client/webpack.config.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.0",
     "express": "^4.13.4",
-    "plaid": "^1.0.10"
+    "html-webpack-plugin": "^2.16.1",
+    "plaid": "^1.0.10",
+    "scriptjs": "^2.5.8",
+    "webpack": "^1.13.0"
   }
 }

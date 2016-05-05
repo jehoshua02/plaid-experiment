@@ -4,7 +4,7 @@ var app = express();
 var plaidClient = require('./lib/plaidClient');
 
 // static files first
-app.use(express.static('client'));
+app.use(express.static('client/build'));
 
 // parse json body
 app.use(bodyParser.urlencoded({extended: false}));

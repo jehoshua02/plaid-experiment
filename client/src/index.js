@@ -1,6 +1,6 @@
-<button id='linkButton'>Open Link - Institution Select</button>
-<script src="https://cdn.plaid.com/link/stable/link-initialize.js"></script>
-<script>
+var $script = require('scriptjs');
+
+$script('https://cdn.plaid.com/link/stable/link-initialize.js', function () {
   var linkHandler = Plaid.create({
     env: 'tartan',
     clientName: 'Client Name',
@@ -27,7 +27,10 @@
   });
 
   // Trigger the standard institution select view
-  document.getElementById('linkButton').onclick = function() {
+  var button = document.createElement("button");
+  button.innerText = 'Open Link - Institution Select';
+  document.body.appendChild(button);
+  button.onclick = function() {
     linkHandler.open();
   };
-</script>
+});

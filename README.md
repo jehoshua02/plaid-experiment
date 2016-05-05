@@ -6,6 +6,7 @@ An experiment to see what it's like to work with [Plaid API](https://plaid.com/d
 
 ```
 npm install
+npm run build
 npm start
 ```
 
