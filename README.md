@@ -10,3 +10,5 @@ npm start
 ```
 
 Open [http://localhost:3000](http://localhost:3000)
+
+If there isn't anything interesting happening on the page, open the browser console and watch the network tab.
