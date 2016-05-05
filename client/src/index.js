@@ -9,8 +9,14 @@ $script('https://cdn.plaid.com/link/stable/link-initialize.js', function () {
     longtail: true,
     selectAccount: true,
 
-    onLoad: function() {
-      // The Link module finished loading.
+    onLoad: function() { // The Link module finished loading.
+      // Trigger the standard institution select view
+      var button = document.createElement("button");
+      button.innerText = 'Open Link - Institution Select';
+      document.body.appendChild(button);
+      button.onclick = function() {
+        linkHandler.open();
+      };
     },
 
     onSuccess: function(__, metadata) {
@@ -25,12 +31,4 @@ $script('https://cdn.plaid.com/link/stable/link-initialize.js', function () {
       // The user exited the Link flow.
     }
   });
-
-  // Trigger the standard institution select view
-  var button = document.createElement("button");
-  button.innerText = 'Open Link - Institution Select';
-  document.body.appendChild(button);
-  button.onclick = function() {
-    linkHandler.open();
-  };
 });
