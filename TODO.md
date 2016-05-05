@@ -1,7 +1,7 @@
 # TODO
 
 + [x] introduce webpack
-+ [ ] update README.md
++ [x] update README.md
 + [ ] introduce react
 + [ ] render transactions
 + [ ] query transactions by date (state update)
