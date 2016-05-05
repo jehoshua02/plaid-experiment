@@ -1,7 +1,8 @@
 {
   "name": "plaid-experiment",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "private": true,
+  "description": "An experiment to see what it's like to work with [Plaid API](https://plaid.com/docs/api/) to get bank transaction data.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,8 +10,8 @@
     "build": "webpack --config ./client/webpack.config.js",
     "watch": "webpack --watch --config ./client/webpack.config.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Joshua Stoutenburg <jehoshua02@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "body-parser": "^1.15.0",
     "express": "^4.13.4",
