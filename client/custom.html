@@ -1,0 +1,33 @@
+<button id='linkButton'>Open Link - Institution Select</button>
+<script src="https://cdn.plaid.com/link/stable/link-initialize.js"></script>
+<script>
+  var linkHandler = Plaid.create({
+    env: 'tartan',
+    clientName: 'Client Name',
+    key: 'test_key',
+    product: 'connect',
+    longtail: true,
+    selectAccount: true,
+
+    onLoad: function() {
+      // The Link module finished loading.
+    },
+
+    onSuccess: function(__, metadata) {
+      fetch('/plaid-connect', {
+        method: 'POST',
+        headers: {'content-type': 'application/json'},
+        body: JSON.stringify(metadata)
+      });
+    },
+
+    onExit: function() {
+      // The user exited the Link flow.
+    }
+  });
+
+  // Trigger the standard institution select view
+  document.getElementById('linkButton').onclick = function() {
+    linkHandler.open();
+  };
+</script>
